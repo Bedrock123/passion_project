@@ -1,15 +1,13 @@
 {
-  "short_name": "Passion Projec",
+  "short_name": "ZB PP",
   "name": "Zachary Bedrosian's Passion Project",
-  "icons": [
-    {
-      "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
+  "icons": [{
+    "src": "https://i.imgur.com/Xs0XemL.png",
+    "sizes": "512x512 192x192 64x64 32x32 24x24 16x16",
+    "type": "image/png"
+  }],
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "theme_color": "#4A90E2",
   "background_color": "#ffffff"
 }

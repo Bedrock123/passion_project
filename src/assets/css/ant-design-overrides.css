@@ -1,8 +1,30 @@
 /* This file is used to overridethe standard Ant design styles */
 
+/* Headline Overdies */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Mono', monospace;
+    color: #47484D;
+    opacity: 0.86;
+    letter-spacing: -1.4px;
+}
+
+/* Basic Element Override */
+
+a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
 /* Button Overides */
 
-.ant-btn-primary {
+.ant-btn {
     font-family: 'Roboto Mono', monospace;
     min-width: 271px;
     border-radius: 0px;
@@ -10,6 +32,6 @@
     height: 46px;
 }
 
-.ant-btn-primary span {
+.ant-btn span {
     letter-spacing: 1.5px;
 }

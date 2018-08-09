@@ -1,1 +1,5 @@
 /* This file is used for the main styles on the application */
+
+.global-wrapper {
+    background-color: #FBFBFB;
+}

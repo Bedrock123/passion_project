@@ -7,10 +7,12 @@ class Routes extends React.Component {
   render() {
     return (
       <Router history={history}>
-        <Switch>
+        <div className="global-wrapper">
+          <Switch>
             <Route exact path="/" component={Login} />
             <Redirect from="*" to="/" />
-        </Switch>
+          </Switch>
+        </div>
       </Router>
     );
   }
