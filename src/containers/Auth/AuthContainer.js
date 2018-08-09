@@ -4,9 +4,9 @@ import { WingBlank } from 'antd-mobile';
 class AuthContainer extends Component {
   render() {
     return (
-      <WingBlank> 
+      <div> 
         {this.props.children}
-      </WingBlank>
+      </div>
     );
   }
 }
