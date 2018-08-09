@@ -72,6 +72,8 @@ html {
     padding-top: 12px;
     border-right: 1px solid #e9e9e9;
     padding-bottom: 7px;
+    color: black;
+    text-decoration: none;
 }
 
 .tab-bar-wrapper .tab-bar-item .tab-bar-icon {
@@ -103,6 +105,9 @@ html {
 
 .tab-bar-wrapper .tab-bar-item .tab-bar-icon-active {
     color: red;
+}
+.tab-bar-wrapper .active {
+    background: #e7ffd9;
 }
 
 .tab-bar-wrapper .tab-bar-item p {
@@ -136,6 +141,8 @@ body {
 
 .react-autosuggest__input {
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
     height: 36px;
     padding: 10px;
     border: 0px solid black;
@@ -192,4 +199,26 @@ body {
 .react-autosuggest__suggestion-match {
     color: red;
     font-weight: bold;
+}
+
+.icon {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Regiustry Stuyling */
+
+.registry-wrapper {
+
+}
+.registry-item {
+    min-height: 111px;
+    box-shadow: 1px 2px 4px #c6c6c6;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom:  23px;
+    padding: 10px;
 }
