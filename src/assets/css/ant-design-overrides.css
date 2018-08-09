@@ -1,1 +1,15 @@
 /* This file is used to overridethe standard Ant design styles */
+
+/* Button Overides */
+
+.ant-btn-primary {
+    font-family: 'Roboto Mono', monospace;
+    min-width: 271px;
+    border-radius: 0px;
+    font-weight: 300;
+    height: 46px;
+}
+
+.ant-btn-primary span {
+    letter-spacing: 1.5px;
+}
