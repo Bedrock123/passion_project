@@ -14,6 +14,14 @@ h6 {
     letter-spacing: -1.4px;
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+    opacity: .85;
+    letter-spacing: 1.4px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
 /* Basic Element Override */
 
 a {
@@ -26,10 +34,8 @@ a {
 
 .ant-btn {
     font-family: 'Roboto Mono', monospace;
-    min-width: 271px;
     border-radius: 0px;
     font-weight: 300;
-    height: 46px;
 }
 
 .ant-btn span {

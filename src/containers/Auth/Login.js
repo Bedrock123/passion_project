@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "antd";
+import { Button } from 'antd-mobile';
 import AuthContainer from "./AuthContainer";
 import Logo from "../../assets/images/logo.svg";
 
@@ -8,7 +8,7 @@ class Login extends Component {
     return (
       <AuthContainer>
         <div>
-          <img src={Logo} alt="Intellgent Class Logo" />
+          <img   className="logo" src={Logo} alt="Intellgent Class Logo" />
           <h1>Log In</h1>
           <h2>Log In</h2>
           <h3>Log In</h3>
@@ -21,7 +21,7 @@ class Login extends Component {
             consectetur purus sit amet fermentum. Sed posuere consectetur est at
             lobortis. Sed posuere consectetur est at <a href="/">lobortis</a>.
           </p>
-          <Button icon="download" size={"large"} type="danger">
+          <Button  size={"large"} type="danger">
             Log In
           </Button>
         </div>

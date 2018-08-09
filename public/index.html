@@ -4,7 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if(!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+    }
+  </script>
   <meta name="author" content="Zachary Bedrosian" />
   <meta name="copyright" content="Zachary Bedrosian" />
   <meta name="robots" content="follow" />
@@ -27,10 +38,7 @@
   <link rel="apple-touch-startup-image" href="splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
   <link rel="apple-touch-startup-image" href="splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
   <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-  <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#6F6F6F">
   <meta name="msapplication-TileColor" content="#4A90E2">
-  <meta name="theme-color" content="#ffffff">
-  <title>PWA Splash Screen</title>
 
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="apple-touch-icon" sizes="192x192" href="%PUBLIC_URL%/icon.png">
@@ -46,6 +54,6 @@
   </noscript>
   <div id="root"></div>
 </body>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto:300" rel="stylesheet">
 
 </html>

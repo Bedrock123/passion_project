@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.8.0",
+    "antd-mobile": "^2.2.3",
+    "axios": "^0.17.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4",
-    "axios": "^0.17.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
     "redux": "^3.7.2",
     "redux-form": "6.7.0",
     "redux-thunk": "^2.2.0"

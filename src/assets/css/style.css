@@ -3,3 +3,7 @@
 .global-wrapper {
     background-color: #FBFBFB;
 }
+
+.logo {
+    opacity: .65;
+}
