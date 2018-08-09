@@ -1,21 +1,17 @@
 import React, { Component } from "react";
-import { FiSearch, FiDatabase, FiCrosshair, FiCalendar, FiGrid } from "react-icons/fi";
+import { FiSearch, FiDatabase, FiCrosshair, FiCalendar } from "react-icons/fi";
 
 class TabBar extends Component {
   render() {
     return (
-      <nav className="tab-bar-wrapper">
-        <div className="tab-bar-item">
-          <FiGrid className="tab-bar-icon" />
-          <p>Profile</p>
-        </div>
+      <footer className="tab-bar-wrapper">
         <div className="tab-bar-item">
           <FiDatabase className="tab-bar-icon" />
           <p>Registry</p>
         </div>
         <div className="tab-bar-item">
-        <FiSearch className="tab-bar-icon" />
-        <p>Search</p>
+          <FiSearch className="tab-bar-icon" />
+          <p>Search</p>
         </div>
         <div className="tab-bar-item">
           <FiCrosshair className="tab-bar-icon" />
@@ -23,10 +19,9 @@ class TabBar extends Component {
         </div>
         <div className="tab-bar-item">
           <FiCalendar className="tab-bar-icon" />
-          <p>Schedule</p>
+          <p>My Schedule</p>
         </div>
- 
-      </nav>
+      </footer>
     );
   }
 }
