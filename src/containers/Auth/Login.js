@@ -21,7 +21,7 @@ class Login extends Component {
             consectetur purus sit amet fermentum. Sed posuere consectetur est at
             lobortis. Sed posuere consectetur est at <a href="/">lobortis</a>.
           </p>
-          <Button  size={"large"} type="danger">
+          <Button  size={"large"} type="primary">
             Log In
           </Button>
         </div>

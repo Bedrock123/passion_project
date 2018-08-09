@@ -1,4 +1,7 @@
 /* This file is used for the main styles on the application */
+html {
+    background: #fbfbfb;
+}
 
 .global-wrapper {
     background-color: #FBFBFB;
