@@ -17,6 +17,7 @@ h6 {
 h2 {
     font-size: 30px;
     letter-spacing: 1.5px;
+    margin: 0px;
     color: #183a78 !important;
 }
 
@@ -54,6 +55,18 @@ html {
     margin: 34px 15px;
 }
 
+.page-subheader {
+    margin: 5px 0px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1.4px;
+    color: #318834;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 36px;
+}
+
 /* Tab Bar Styles */
 
 .logo {
@@ -87,6 +100,9 @@ html {
     background: #183a77;
     width: 0%;
     transition: all 0.3s ease;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
 .tab-bar-wrapper .tab-bar-item .highlight-bar-right {
@@ -96,7 +112,7 @@ html {
     transition: all 0.3s ease;
     width: 0%;
     right: 0;
-    bottom: 0;
+    top: 0;
 }
 
 .tab-bar-wrapper .active .highlight-bar-right {
@@ -152,8 +168,8 @@ html {
 
 .switch-wrapper {
     position: relative;
-  }
-   
-  .switch-wrapper > div {
+}
+
+.switch-wrapper>div {
     position: absolute;
-  }
+}
