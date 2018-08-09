@@ -8,14 +8,20 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "brandon-grotesque";
     color: #222;
-    opacity: 0.86;
     font-weight: 800;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    color: #183a78 !important;
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "museo-sans";
     opacity: .85;
     letter-spacing: 1.4px;
     line-height: 26px;
@@ -27,7 +33,7 @@ p {
 /* Basic Element Override */
 
 a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "museo-sans";
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -39,7 +45,7 @@ html {
 /* Generalist Component Styles */
 
 .global-wrapper {
-    background-color: #FBFBFB;
+    background: radial-gradient(ellipse at center, #fff 0, #fcfcfc 96%);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -72,31 +78,13 @@ html {
     padding-top: 12px;
     border-right: 1px solid #e9e9e9;
     padding-bottom: 7px;
-    color: black;
+    color: #4e4e4e;
     text-decoration: none;
 }
 
 .tab-bar-wrapper .tab-bar-item .tab-bar-icon {
     font-size: 21px;
     opacity: .85;
-}
-
-.tab-bar-wrapper .tab-bar-item-special {
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 56px;
-    background: #4A90E2;
-    border-radius: 100%;
-    height: 56px;
-    margin-bottom: 12px;
-    top: -24px;
-    color: white !important;
-    padding: 7px;
-    box-shadow: 0px 2px 9px #bcbcbc;
 }
 
 .tab-bar-wrapper .tab-bar-item-special p {
@@ -106,20 +94,27 @@ html {
 .tab-bar-wrapper .tab-bar-item .tab-bar-icon-active {
     color: red;
 }
+
 .tab-bar-wrapper .active {
-    background: #e7ffd9;
+    border-bottom: 3px solid #183a78;
+    color: #183a78;
 }
 
 .tab-bar-wrapper .tab-bar-item p {
     margin: 0;
-    color: black;
+    color: #7f7f7f;
     opacity: 1;
     -webkit-touch-callout: none;
+    font-family: "brandon-grotesque";
+    text-transform: uppercase;
     -webkit-user-select: none;
     /* Disable selection/copy in UIWebView */
-    font-weight: 100;
-    text-transform: uppercase;
-    font-size: 9px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.tab-bar-wrapper .active p {
+    color: #183a78;
 }
 
 /* Search Bar Styles */
@@ -150,7 +145,7 @@ body {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     background: #f9f9f9;
-    border-bottom: 2px solid #10921a;
+    border-bottom: 2px solid #183a78;
 }
 
 .react-autosuggest__input--focused {
@@ -211,14 +206,13 @@ body {
 
 /* Regiustry Stuyling */
 
-.registry-wrapper {
+.registry-wrapper {}
 
-}
 .registry-item {
     min-height: 111px;
-    box-shadow: 1px 2px 4px #c6c6c6;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    display: flex;
-    margin-bottom:  23px;
+    background: white;
+    margin-bottom: 23px;
     padding: 10px;
 }

@@ -11,6 +11,7 @@ class Registry extends Component {
             <p>{BabsonClass.day_of_week}</p>
             <p>{BabsonClass.spots_filled_string}</p>
             <p>{BabsonClass.course_code}</p>
+            <p>{BabsonClass["professor(s)"]}</p>
         </div>
         );
     });
