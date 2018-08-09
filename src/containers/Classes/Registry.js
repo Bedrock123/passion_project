@@ -20,7 +20,7 @@ class Registry extends Component {
     return (
         <div className="registry-wrapper">
             <h2>Registry</h2>
-            {this.renderAllBabsonClasses()}
+           
         </div>
     )
   }
