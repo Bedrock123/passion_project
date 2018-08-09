@@ -5,7 +5,7 @@ import Routes from "./routes";
 
 import "../assets/css/normalize.css"
 import "../assets/css/style.css"
-import "../assets/css/ant-design-overrides.css"
+
 
 class App extends React.Component {
   render() {

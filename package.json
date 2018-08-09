@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd-mobile": "^2.2.3",
     "axios": "^0.17.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-icons": "^3.0.5",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
