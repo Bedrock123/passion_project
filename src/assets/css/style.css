@@ -144,9 +144,9 @@ html {
     color: #7f7f7f;
     opacity: 1;
     -webkit-touch-callout: none;
+    -webkit-user-select: none;
     font-family: "brandon-grotesque";
     text-transform: uppercase;
-    -webkit-user-select: none;
     /* Disable selection/copy in UIWebView */
     font-weight: 600;
     font-size: 11px;
@@ -198,15 +198,21 @@ html {
 
 .registry-inner-wrapper .registry-item {
     cursor: pointer;
-    background-image: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
+    background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
     box-shadow:0px 5px 10px 0 rgb(169, 169, 169);
     padding: 15px;
     transition: all 0.3s ease;
     top: 0px;
     margin-bottom: 18px;
-    border-radius: 6px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    border-radius: 8px;
     bottom: 0px;
     position: relative;
+}
+.registry-inner-wrapper .registry-item:hover {
+    transition: all 0.3s ease;
+    opacity: .86;
 }
 
 .registry-inner-wrapper .registry-item .registry-item-header {
@@ -214,12 +220,12 @@ html {
 }
 
 .registry-inner-wrapper .registry-item .label {
-    color: #fff;
-    font-size: 15px;
+    color: #d3d3d3;
+    font-size: 11px;
     text-transform: uppercase;
     font-weight: 500;
-    line-height: 28px;
-    margin: 5px 0px;
+    line-height: 20px;
+    margin: 0px 0px;
 
 }
 
@@ -238,15 +244,16 @@ html {
     font-weight: 600;
     text-transform: uppercase;
     color:  white;
-
+    
 }
 
 .registry-inner-wrapper .registry-item .registry-item-header .main-value {
     color: #fff;
     font-size: 14px;
+    
     font-family: "brandon-grotesque";
     margin: 0px;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     line-height: 20px;
 }

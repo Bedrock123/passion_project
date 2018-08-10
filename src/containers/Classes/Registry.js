@@ -27,23 +27,28 @@ class Registry extends Component {
   
               <div className="registry-item-block">
                 <p className="main-value">
+                <p className="label">Time</p>
                   {BabsonClass.day_of_week} | {BabsonClass.time}
                 </p>
               </div>
             </div>
             <div className="registry-item-body">
             <div className="registry-item-block">
+            <p className="label">Code</p>
                 <p className="main-value">{BabsonClass.course_code}-{BabsonClass.course_section}</p>
               </div>
               <div className="registry-item-block">
+              <p className="label">Spots Left</p>
                 <p className="main-value">{BabsonClass.spots_filled_string}</p>
               </div>
               <div className="registry-item-block">
+                <p className="label">Credits</p>
                 <p className="main-value">{BabsonClass.credits}</p>
               </div>
             </div>
             <div className="registry-item-body">
               <div className="registry-item-block">
+              <p className="label">Professors</p>
                 <p className="main-value">{BabsonClass["professor(s)"]}</p>
               </div>
             </div>
