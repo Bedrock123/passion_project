@@ -25,12 +25,12 @@ class Registry extends Component {
     return (
       <div className="registry-wrapper">
         <Dock
-          position="top"
+          position="bottom"
           fluid={false}
           dockStyle={{
             background: "#fff"
           }}
-          size={1000}
+          size={500}
           dimMode={"opaque"}
           dimStyle={{
             background: "rgba(0, 0, 0, 0.45)"

@@ -1,15 +1,17 @@
 import React from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import history from "../history";
+import { ConnectedRouter } from "connected-react-router";
 import Registry from "../containers/Classes/Registry";
 import ClassTrack from "../containers/Classes/ClassTrack";
 import MySchedule from "../containers/Classes/MySchedule";
 import TabBar from "../components/navigation/TabBar";
+import { store } from "../store";
 
 class Routes extends React.Component {
   render() {
     return (
-      <Router history={history}>
+      <ConnectedRouter history={history}>
         <div className="global-wrapper">
           <div className="content-wrapper">
             <Switch>
@@ -21,7 +23,7 @@ class Routes extends React.Component {
           </div>
           <TabBar />
         </div>
-      </Router>
+      </ConnectedRouter>
     );
   }
 }
