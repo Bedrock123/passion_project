@@ -232,14 +232,7 @@ html {
     transition: all 0.3s ease;
     opacity: .86;
 }
-.registry-item:hover {
 
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    bottom: 0;
-
-}
 
 .registry-item .registry-item-header {
     margin-bottom: 15px;
