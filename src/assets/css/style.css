@@ -177,3 +177,26 @@ html {
 .switch-wrapper>div {
     position: absolute;
 }
+
+/* Registyr Wrapper */
+
+.registry-inner-wrapper {
+    margin-top: 20px;
+}
+
+.registry-inner-wrapper .registry-item {
+    border-radius: 6px;
+    background-color: #FBFBFB;
+    box-shadow: 0 6px 12px 0 rgba(219, 218, 218, 0.5);
+    padding: 15px;
+}
+
+/* Class Item */
+
+.close-modal-item {
+    height: 10px;
+    background: #d6d6d6;
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 12px;
+}
