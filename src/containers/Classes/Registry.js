@@ -4,15 +4,6 @@ import { FiSearch } from "react-icons/fi";
 import Dock from "react-dock";
 import Card from "../../components/Registry/Card";
 
-const cardColors = [
-  "blue-card",
-  "red-card",
-  "green-card",
-  "yellow-card",
-  "purple-card",
-  "silver-card"
-];
-
 function getCardColor(dayOfWeek) {
   if (dayOfWeek === "MW") {
     return "blue-card";
@@ -80,8 +71,10 @@ class Registry extends Component {
                 isVisible: !this.state.isVisible
               })
             }
-            className="close-modal-item"
-          />
+            className="close-modal-item-container"
+          >
+            <div className="close-modal-item" />
+          </div>
 
           {this.renderAllBabsonClasses(this.state.classID)}
           <div className="class-detail-wrapper">
@@ -123,13 +116,10 @@ class Registry extends Component {
           </div>
           <div className="class-track-button-row">
             <div className="class-track-button">
-              <p>TRACK</p>
+              <p>TRACK CLASS</p>
             </div>
             <div className="class-track-button">
-              <p>SCHEDULE</p>
-            </div>
-            <div className="class-track-button">
-              <p>SHARE</p>
+              <p>ADD TO SCHEDULE</p>
             </div>
           </div>
         </Dock>
