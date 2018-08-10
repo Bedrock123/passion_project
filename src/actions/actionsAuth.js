@@ -13,7 +13,7 @@ export function loggedInUserSuccess(json) {
 export function fetchLoggedInUserData() {
     return function (dispatch) {
         dispatch(loggedInUserSuccess({
-            user: 'Zachary Bedrosian'
+            user: ['Hello', 'Doofbye']
         }));
     };
 }

@@ -7,7 +7,7 @@ class ClassTrack extends Component {
       <div className="registry-wrapper">
         <h2>Class Track</h2>
         {this.props.loggedInUser ? (
-          <h3 className="page-subheader">{this.props.loggedInUser.user}</h3>
+          <h3 className="page-subheader">Array</h3>
         ) : null}
       </div>
     );

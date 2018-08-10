@@ -1,12 +1,11 @@
 import React from "react";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import history from "../history";
-import { ConnectedRouter } from "connected-react-router";
 import Registry from "../containers/Classes/Registry";
 import ClassTrack from "../containers/Classes/ClassTrack";
 import MySchedule from "../containers/Classes/MySchedule";
 import TabBar from "../components/navigation/TabBar";
-import { store } from "../store";
+import { ConnectedRouter } from "connected-react-router";
 
 class Routes extends React.Component {
   render() {

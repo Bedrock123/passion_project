@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "../store";
 import Routes from "./routes";
 import { PersistGate } from "redux-persist/integration/react";
+import OnlineOfflineWrapper from "../containers/System/OnlineOfflineWrapper";
 
 import "../assets/css/normalize.css";
 import "../assets/css/style.css";
@@ -12,7 +13,9 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Routes />
+          <OnlineOfflineWrapper>
+            <Routes />
+          </OnlineOfflineWrapper>
         </PersistGate>
       </Provider>
     );
