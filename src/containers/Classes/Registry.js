@@ -3,6 +3,15 @@ import BabsonClasses from "../../components/navigation/classes.json";
 import { FiSearch } from "react-icons/fi";
 import Dock from "react-dock";
 
+const cardColors = [
+  'blue-card',
+  'red-card',
+  'green-card',
+  'yellow-card',
+  'purple-card',
+  'silver-card',
+]
+
 class Registry extends Component {
   constructor(props) {
     super(props);
@@ -10,10 +19,11 @@ class Registry extends Component {
   }
   renderAllBabsonClasses() {
     return BabsonClasses.map(BabsonClass => {
+      var color = cardColors[Math.floor(Math.random()*cardColors.length)]
       if (BabsonClass.course_code === "ACC1000") {
         return (
           <div
-            className="registry-item"
+            className={"registry-item " + color }
             onClick={() =>
               this.setState({
                 isVisible: !this.state.isVisible

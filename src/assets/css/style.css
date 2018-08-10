@@ -22,7 +22,7 @@ h2 {
 }
 
 p {
-    font-family: "museo-sans";
+    font-family: "brandon-grotesque";
     opacity: .85;
     letter-spacing: 1.4px;
     line-height: 26px;
@@ -34,7 +34,7 @@ p {
 /* Basic Element Override */
 
 a {
-    font-family: "museo-sans";
+    font-family: "brandon-grotesque";
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -187,6 +187,7 @@ html {
     text-transform: uppercase;
     margin-left: 50px;
     margin-top: 3px;
+    width: 95%;
    
 }
 .registry-search-wrapper input::-webkit-input-placeholder {
@@ -198,7 +199,6 @@ html {
 
 .registry-inner-wrapper .registry-item {
     cursor: pointer;
-    background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
     box-shadow:0px 5px 10px 0 rgb(169, 169, 169);
     padding: 15px;
     transition: all 0.3s ease;
@@ -210,6 +210,25 @@ html {
     bottom: 0px;
     position: relative;
 }
+.registry-inner-wrapper .silver-card {
+    background: linear-gradient(160deg, #91a8cf 35%, #79869b 100%);
+}
+.registry-inner-wrapper .blue-card {
+    background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
+}
+.registry-inner-wrapper .purple-card {
+    background: linear-gradient(160deg, #8e42cb 35%, #301876 100%);
+}
+.registry-inner-wrapper .red-card {
+    background: linear-gradient(160deg, #cb426a 35%, #761818 100%);
+}
+.registry-inner-wrapper .yellow-card {
+    background: linear-gradient(160deg, #cbab42 35%, #767018 100%);
+}
+.registry-inner-wrapper .green-card {
+    background: linear-gradient(160deg, #42cb5d 35%, #187636 100%);
+}
+
 .registry-inner-wrapper .registry-item:hover {
     transition: all 0.3s ease;
     opacity: .86;
@@ -239,7 +258,7 @@ html {
    bottom: 10px;
 }
 .registry-inner-wrapper .registry-item .registry-badge p {
-    font-family: "brandon-grotesque";
+    font-family: "ocr-a-std",monospace;
     margin: 0px;
     font-weight: 600;
     text-transform: uppercase;
@@ -251,7 +270,7 @@ html {
     color: #fff;
     font-size: 14px;
     
-    font-family: "brandon-grotesque";
+    font-family: "ocr-a-std",monospace;
     margin: 0px;
     font-weight: 800;
     text-transform: uppercase;
@@ -269,7 +288,7 @@ html {
 }
 
 .registry-inner-wrapper .registry-item .registry-item-body .main-value {
-    font-family: "brandon-grotesque";
+    font-family: "ocr-a-std",monospace;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
