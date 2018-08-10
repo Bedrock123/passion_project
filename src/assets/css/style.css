@@ -8,372 +8,371 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "brandon-grotesque";
-    color: #222;
-    font-weight: 800;
-    text-transform: uppercase;
+  font-family: "brandon-grotesque";
+  color: #222;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2 {
-    font-size: 30px;
-    letter-spacing: 1.5px;
-    margin: 0px;
-    color: #183a78 !important;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  margin: 0px;
+  color: #183a78 !important;
 }
 
 p {
-    font-family: "brandon-grotesque";
-    opacity: .85;
-    letter-spacing: 1.4px;
-    line-height: 26px;
-    font-weight: 100;
-    color: #222;
-    font-size: 14px;
+  font-family: "brandon-grotesque";
+  opacity: 0.85;
+  letter-spacing: 1.4px;
+  line-height: 26px;
+  font-weight: 100;
+  color: #222;
+  font-size: 14px;
 }
 
 /* Basic Element Override */
 
 a {
-    font-family: "brandon-grotesque";
-    font-weight: 300;
-    letter-spacing: 1px;
+  font-family: "brandon-grotesque";
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 html {
-    background: #fbfbfb;
+  background: #fbfbfb;
 }
 
 /* Generalist Component Styles */
 
 .global-wrapper {
-    background: radial-gradient(ellipse at center, #fff 0, #fcfcfc 96%);
-    min-height: 100vh;
-    overflow-x: hidden;
+  background: radial-gradient(ellipse at center, #fff 0, #fcfcfc 96%);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-subheader {
-    margin: 5px 0px;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1.4px;
-    color: #318834;
-    cursor: pointer;
-    position: absolute;
-    font-family: "brandon-grotesque";
-    text-transform: uppercase;
-    text-decoration: none;
-    right: 20px;
-    top: 36px;
+  margin: 5px 0px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  color: #318834;
+  cursor: pointer;
+  position: absolute;
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  text-decoration: none;
+  right: 20px;
+  top: 36px;
 }
 
 /* Tab Bar Styles */
 
 .logo {
-    opacity: .65;
-    max-width: 50px;
+  opacity: 0.65;
+  max-width: 50px;
 }
 
 .tab-bar-wrapper {
-    box-shadow: -2px 6px 12px 5px #c8c8c8;
-    min-height: 57px;
-    background: #ffffff;
-    position: fixed;
-    display: flex;
-    bottom: 0px;
-    width: 100%;
-    z-index: 1;
+  box-shadow: -2px 6px 12px 5px #c8c8c8;
+  min-height: 57px;
+  background: #ffffff;
+  position: fixed;
+  display: flex;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1;
 }
 
 .tab-bar-wrapper .tab-bar-item {
-    flex: 1;
-    text-align: center;
-    padding-top: 12px;
-    color: #4e4e4e;
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 5px;
+  flex: 1;
+  text-align: center;
+  padding-top: 12px;
+  color: #4e4e4e;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .tab-bar-wrapper .tab-bar-item .highlight-bar-left {
-    height: 3px;
-    background: #183a77;
-    width: 0%;
-    transition: all 0.3s ease;
-    left: 0;
-    position: absolute;
-    top: 0;
+  height: 3px;
+  background: #183a77;
+  width: 0%;
+  transition: all 0.3s ease;
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .tab-bar-wrapper .tab-bar-item .highlight-bar-right {
-    height: 3px;
-    background: #183a77;
-    position: absolute;
-    transition: all 0.3s ease;
-    width: 0%;
-    right: 0;
-    top: 0;
+  height: 3px;
+  background: #183a77;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 0%;
+  right: 0;
+  top: 0;
 }
 
 .tab-bar-wrapper .active .highlight-bar-right {
-    width: 50%;
+  width: 50%;
 }
 
 .tab-bar-wrapper .active .highlight-bar-left {
-    width: 50%;
+  width: 50%;
 }
 
 .tab-bar-wrapper .tab-bar-item .tab-bar-icon {
-    font-size: 18px;
-    opacity: .85;
+  font-size: 18px;
+  opacity: 0.85;
 }
 
 .tab-bar-wrapper .tab-bar-item-special p {
-    color: white !important;
+  color: white !important;
 }
 
 .tab-bar-wrapper .active {
-    color: #183a78;
+  color: #183a78;
 }
 
 .tab-bar-wrapper .tab-bar-item p {
-    margin: 0;
-    color: #7f7f7f;
-    opacity: 1;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    font-family: "brandon-grotesque";
-    text-transform: uppercase;
-    /* Disable selection/copy in UIWebView */
-    font-weight: 600;
-    font-size: 11px;
+  margin: 0;
+  color: #7f7f7f;
+  opacity: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  /* Disable selection/copy in UIWebView */
+  font-weight: 600;
+  font-size: 11px;
 }
 
 .tab-bar-wrapper .active p {
-    color: #183a78;
+  color: #183a78;
 }
 
 /* Registyr Wrapper */
 
 .registry-search-wrapper {
-    height: 67px;
-    box-shadow: 0 10px 12px 0 rgba(219, 218, 218, 0.5);
-    position: relative;
-    margin: 13px 15px 5px 13px;
+  height: 67px;
+  box-shadow: 0 10px 12px 0 rgba(219, 218, 218, 0.5);
+  position: relative;
+  margin: 13px 15px 5px 13px;
 }
 
 .registry-search-wrapper svg {
-    position: absolute;
-    top: 23px;
-    font-size: 20px;
-    left: 20px;
-    opacity: .85;
-    color: #7f7f7f;
+  position: absolute;
+  top: 23px;
+  font-size: 20px;
+  left: 20px;
+  opacity: 0.85;
+  color: #7f7f7f;
 }
 
 .registry-search-wrapper input {
-    background: none;
-    outline: none;
-    border: 0px solid black;
-    color: #183a78;
-    font-family: "brandon-grotesque";
-    opacity: .85;
-    letter-spacing: 1.4px;
-    line-height: 26px;
-    font-weight: 700;
-    font-size: 16px;
-    height: 57px;
-    text-transform: uppercase;
-    margin-left: 50px;
-    margin-top: 3px;
-    width: 95%;
+  background: none;
+  outline: none;
+  border: 0px solid black;
+  color: #183a78;
+  font-family: "brandon-grotesque";
+  opacity: 0.85;
+  letter-spacing: 1.4px;
+  line-height: 26px;
+  font-weight: 700;
+  font-size: 16px;
+  height: 57px;
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-top: 3px;
+  width: 95%;
 }
 
 .registry-search-wrapper input::-webkit-input-placeholder {
-    color: #7f7f7f;
+  color: #7f7f7f;
 }
 
 .registry-inner-wrapper {
-    margin: 34px 15px;
+  margin: 34px 15px;
 }
 
 /* Regisry Details */
 
 .class-detail-wrapper {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .class-detail-wrapper .class-detail-row {
-    display: flex;
-    margin-bottom: 20px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .class-detail-wrapper .class-detail-row .class-detail-item {
-    flex: 1;
-    justify-content: flex-end;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .class-detail-wrapper .class-detail-row .class-detail-item .label {
-    font-weight: 800;
-    color: #4f4f4f;
-    margin: 0px;
+  font-weight: 800;
+  color: #4f4f4f;
+  margin: 0px;
 }
 
 .class-detail-wrapper .class-detail-row .class-detail-item .value {
-    color: #4f4f4f;
-    margin: 0px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #4f4f4f;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .class-track-button-row {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    box-shadow: -2px 6px 12px 5px #c8c8c8;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  box-shadow: -2px 6px 12px 5px #c8c8c8;
 }
 
 .class-track-button {
-    text-align: center;
-    background: white;
-    padding: 2px;
-    flex: 1;
-    position: cursor;
+  text-align: center;
+  background: white;
+  padding: 2px;
+  flex: 1;
+  position: cursor;
 }
 
 .class-track-button p {
-    margin: 0;
-    color: #7f7f7f;
-    opacity: 1;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    font-family: "brandon-grotesque";
-    text-transform: uppercase;
-    /* Disable selection/copy in UIWebView */
-    font-weight: 600;
-    font-size: 11px;
-    padding: 10px;
+  margin: 0;
+  color: #7f7f7f;
+  opacity: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  /* Disable selection/copy in UIWebView */
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
 }
 
 .registry-item {
-    cursor: pointer;
-    box-shadow: 0px 5px 10px 0 rgb(169, 169, 169);
-    padding: 15px;
-    transition: all 0.3s ease;
-    top: 0px;
-    margin-bottom: 18px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    border-radius: 8px;
-    bottom: 0px;
-    position: relative;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px 0 rgb(169, 169, 169);
+  padding: 15px;
+  transition: all 0.3s ease;
+  top: 0px;
+  margin-bottom: 18px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  border-radius: 8px;
+  bottom: 0px;
+  position: relative;
 }
 
 .silver-card {
-    background: linear-gradient(160deg, #91a8cf 35%, #79869b 100%);
+  background: linear-gradient(160deg, #91a8cf 35%, #79869b 100%);
 }
 
 .blue-card {
-    background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
+  background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
 }
 
 .purple-card {
-    background: linear-gradient(160deg, #8e42cb 35%, #301876 100%);
+  background: linear-gradient(160deg, #8e42cb 35%, #301876 100%);
 }
 
 .red-card {
-    background: linear-gradient(160deg, #cb426a 35%, #761818 100%);
+  background: linear-gradient(160deg, #cb426a 35%, #761818 100%);
 }
 
 .yellow-card {
-    background: linear-gradient(160deg, #cbab42 35%, #767018 100%);
+  background: linear-gradient(160deg, #cbab42 35%, #767018 100%);
 }
 
 .green-card {
-    background: linear-gradient(160deg, #42cb5d 35%, #187636 100%);
+  background: linear-gradient(160deg, #42cb5d 35%, #187636 100%);
 }
 
 .registry-item:hover {
-    transition: all 0.3s ease;
-    opacity: .86;
+  transition: all 0.3s ease;
+  opacity: 0.86;
 }
 
 .registry-item .registry-item-header {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .registry-item .label {
-    color: #ebebeb;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 20px;
-    margin: 0px 0px;
+  color: #ebebeb;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0px 0px;
 }
 
 .registry-item .registry-badge {
-    position: absolute;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.4);
-    ;
-    padding: 7px 10px;
-    border-radius: 6px;
-    margin: 0px;
-    bottom: 10px;
+  position: absolute;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 7px 10px;
+  border-radius: 6px;
+  margin: 0px;
+  bottom: 10px;
 }
 
 .registry-item .registry-badge p {
-    font-family: "ocr-a-std", monospace;
-    margin: 0px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: white;
+  font-family: "ocr-a-std", monospace;
+  margin: 0px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
 }
 
 .registry-item .registry-item-header .main-value {
-    color: #fff;
-    font-size: 14px;
-    text-shadow: 1px 1px 1px #6b6b6b;
-    font-family: "ocr-a-std", monospace;
-    margin: 0px;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #6b6b6b;
+  font-family: "ocr-a-std", monospace;
+  margin: 0px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 20px;
 }
 
 .registry-item .registry-item-body {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .registry-item .registry-item-body .registry-item-block {
-    flex: 1;
-    justify-content: flex-end;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .registry-item .registry-item-body .main-value {
-    font-family: "brandon-grotesque";
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 24px;
-    color: #fff;
-    margin: 0;
+  font-family: "brandon-grotesque";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: #fff;
+  margin: 0;
 }
 
 /* Class Item */
 
 .close-modal-item-container {
-    height: 10px;
-    margin: 15px;
+  height: 10px;
+  margin: 15px;
 }
 
 .close-modal-item {
-    height: 10px;
-    background: #d6d6d6;
-    width: 100px;
-    text-transform: uppercase;
-    margin: 19px auto;
-    border-radius: 12px;
+  height: 10px;
+  background: #d6d6d6;
+  width: 100px;
+  text-transform: uppercase;
+  margin: 19px auto;
+  border-radius: 12px;
 }
