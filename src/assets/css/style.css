@@ -51,8 +51,6 @@ html {
     overflow-x: hidden;
 }
 
-
-
 .page-subheader {
     margin: 5px 0px;
     font-weight: 500;
@@ -133,7 +131,6 @@ html {
     color: white !important;
 }
 
-
 .tab-bar-wrapper .active {
     color: #183a78;
 }
@@ -155,14 +152,15 @@ html {
     color: #183a78;
 }
 
-
 /* Registyr Wrapper */
+
 .registry-search-wrapper {
     height: 67px;
     box-shadow: 0 10px 12px 0 rgba(219, 218, 218, 0.5);
     position: relative;
     margin: 13px 15px 5px 13px;
 }
+
 .registry-search-wrapper svg {
     position: absolute;
     top: 23px;
@@ -171,6 +169,7 @@ html {
     opacity: .85;
     color: #7f7f7f;
 }
+
 .registry-search-wrapper input {
     background: none;
     outline: none;
@@ -187,18 +186,69 @@ html {
     margin-left: 50px;
     margin-top: 3px;
     width: 95%;
-   
 }
+
 .registry-search-wrapper input::-webkit-input-placeholder {
     color: #7f7f7f;
 }
+
 .registry-inner-wrapper {
     margin: 34px 15px;
 }
 
- .registry-item {
+/* Regisry Details */
+
+.class-detail-wrapper {
+    overflow: scroll;
+    height: 364px;
+}
+
+.class-detail-wrapper .class-detail-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.class-detail-wrapper .class-detail-row .class-detail-item {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.class-detail-wrapper .class-detail-row .class-detail-item .label {
+    font-weight: 800;
+    color: #4f4f4f;
+    margin: 0px;
+}
+
+.class-detail-wrapper .class-detail-row .class-detail-item .value {
+    color: #4f4f4f;
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.class-track-button-row {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    right: 0;
+}
+
+.class-track-button {
+    text-align: center;
+    background: white;
+    font-family: "ocr-a-std", monospace;
+    padding: 2px;
+    border-right: 1px solid #c0c0c0;
+    flex: 1;
+}
+
+.class-track-button p {
+    font-family: "ocr-a-std", monospace;
+    color: #21417a;
+}
+
+.registry-item {
     cursor: pointer;
-    box-shadow:0px 5px 10px 0 rgb(169, 169, 169);
+    box-shadow: 0px 5px 10px 0 rgb(169, 169, 169);
     padding: 15px;
     transition: all 0.3s ease;
     top: 0px;
@@ -209,85 +259,90 @@ html {
     bottom: 0px;
     position: relative;
 }
+
 .silver-card {
     background: linear-gradient(160deg, #91a8cf 35%, #79869b 100%);
 }
- .blue-card {
+
+.blue-card {
     background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
 }
+
 .purple-card {
     background: linear-gradient(160deg, #8e42cb 35%, #301876 100%);
 }
+
 .red-card {
     background: linear-gradient(160deg, #cb426a 35%, #761818 100%);
 }
- .yellow-card {
+
+.yellow-card {
     background: linear-gradient(160deg, #cbab42 35%, #767018 100%);
 }
+
 .green-card {
     background: linear-gradient(160deg, #42cb5d 35%, #187636 100%);
 }
 
- .registry-item:hover {
+.registry-item:hover {
     transition: all 0.3s ease;
     opacity: .86;
 }
-
 
 .registry-item .registry-item-header {
     margin-bottom: 15px;
 }
 
- .registry-item .label {
+.registry-item .label {
     color: #ebebeb;
     font-size: 11px;
     text-transform: uppercase;
     font-weight: 600;
     line-height: 20px;
     margin: 0px 0px;
-
 }
 
 .registry-item .registry-badge {
-   position: absolute;
-   right: 10px;
-   background: rgba(255, 255, 255, 0.4);;
-   padding: 7px 10px;
-   border-radius: 6px;
+    position: absolute;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    ;
+    padding: 7px 10px;
+    border-radius: 6px;
     margin: 0px;
-   bottom: 10px;
+    bottom: 10px;
 }
- .registry-item .registry-badge p {
-    font-family: "brandon-grotesque";
+
+.registry-item .registry-badge p {
+    font-family: "ocr-a-std", monospace;
     margin: 0px;
     font-weight: 600;
     text-transform: uppercase;
-    color:  white;
-    
+    color: white;
 }
 
- .registry-item .registry-item-header .main-value {
+.registry-item .registry-item-header .main-value {
     color: #fff;
     font-size: 14px;
-    
-    font-family: "ocr-a-std",monospace;
+    text-shadow: 1px 1px 1px #6b6b6b;
+    font-family: "ocr-a-std", monospace;
     margin: 0px;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 20px;
 }
 
- .registry-item .registry-item-body {
+.registry-item .registry-item-body {
     display: flex;
     margin-bottom: 10px;
 }
 
- .registry-item .registry-item-body .registry-item-block {
+.registry-item .registry-item-body .registry-item-block {
     flex: 1;
     justify-content: flex-end;
 }
 
- .registry-item .registry-item-body .main-value {
+.registry-item .registry-item-body .main-value {
     font-family: "brandon-grotesque";
     font-size: 14px;
     font-weight: 700;
@@ -307,4 +362,3 @@ html {
     margin: 10px auto;
     border-radius: 12px;
 }
-

@@ -2,15 +2,30 @@ import React, { Component } from "react";
 import BabsonClasses from "../../components/navigation/classes.json";
 import { FiSearch } from "react-icons/fi";
 import Dock from "react-dock";
+import Card from "../../components/Registry/Card";
 
 const cardColors = [
-  'blue-card',
-  'red-card',
-  'green-card',
-  'yellow-card',
-  'purple-card',
-  'silver-card',
-]
+  "blue-card",
+  "red-card",
+  "green-card",
+  "yellow-card",
+  "purple-card",
+  "silver-card"
+];
+
+function getCardColor(dayOfWeek) {
+  if (dayOfWeek === "MW") {
+    return "blue-card";
+  } else if (dayOfWeek === "TR") {
+    return "red-card";
+  } else if (dayOfWeek === "W") {
+    return "purple-card";
+  } else if (dayOfWeek === "T") {
+    return "green-card";
+  } else {
+    return "silver-card";
+  }
+}
 
 class Registry extends Component {
   constructor(props) {
@@ -19,103 +34,23 @@ class Registry extends Component {
   }
   renderAllBabsonClasses(ID) {
     return BabsonClasses.map(BabsonClass => {
-      var color = cardColors[Math.floor(Math.random()*cardColors.length)]
+      var color = getCardColor(BabsonClass.day_of_week);
       if (ID) {
         if (BabsonClass.unique_key_internal === ID) {
-          return (
-            <div
-              className={"registry-item " + color }
-              onClick={() =>
-                this.setState({
-                  isVisible: !this.state.isVisible
-                })
-              }
-            >
-              <div className="registry-item-header">
-                <p className="main-value">{BabsonClass.class_name}</p>
-              </div>
-              <div className="registry-item-body">
-    
-                <div className="registry-item-block">
-                  <p className="main-value">
-                  <p className="label">Time</p>
-                    {BabsonClass.day_of_week} | {BabsonClass.time}
-                  </p>
-                </div>
-              </div>
-              <div className="registry-item-body">
-              <div className="registry-item-block">
-              <p className="label">Code</p>
-                  <p className="main-value">{BabsonClass.course_code}-{BabsonClass.course_section}</p>
-                </div>
-                <div className="registry-item-block">
-                <p className="label">Spots Left</p>
-                  <p className="main-value">{BabsonClass.spots_filled_string}</p>
-                </div>
-                <div className="registry-item-block">
-                  <p className="label">Credits</p>
-                  <p className="main-value">{BabsonClass.credits}</p>
-                </div>
-              </div>
-              <div className="registry-item-body">
-                <div className="registry-item-block">
-                <p className="label">Professors</p>
-                  <p className="main-value">{BabsonClass["professor(s)"]}</p>
-                </div>
-              </div>
-              <div class="registry-badge">
-                  <p>FULL</p>
-              </div>
-            </div>
-          );
+          return <Card BabsonClass={BabsonClass} color={color} />;
         }
       } else {
-
         if (BabsonClass.course_code === "ACC1000") {
           return (
             <div
-              className={"registry-item " + color }
               onClick={() =>
                 this.setState({
-                  isVisible: !this.state.isVisible
+                  isVisible: !this.state.isVisible,
+                  classID: BabsonClass.unique_key_internal
                 })
               }
             >
-              <div className="registry-item-header">
-                <p className="main-value">{BabsonClass.class_name}</p>
-              </div>
-              <div className="registry-item-body">
-    
-                <div className="registry-item-block">
-                  <p className="main-value">
-                  <p className="label">Time</p>
-                    {BabsonClass.day_of_week} | {BabsonClass.time}
-                  </p>
-                </div>
-              </div>
-              <div className="registry-item-body">
-              <div className="registry-item-block">
-              <p className="label">Code</p>
-                  <p className="main-value">{BabsonClass.course_code}-{BabsonClass.course_section}</p>
-                </div>
-                <div className="registry-item-block">
-                <p className="label">Spots Left</p>
-                  <p className="main-value">{BabsonClass.spots_filled_string}</p>
-                </div>
-                <div className="registry-item-block">
-                  <p className="label">Credits</p>
-                  <p className="main-value">{BabsonClass.credits}</p>
-                </div>
-              </div>
-              <div className="registry-item-body">
-                <div className="registry-item-block">
-                <p className="label">Professors</p>
-                  <p className="main-value">{BabsonClass["professor(s)"]}</p>
-                </div>
-              </div>
-              <div class="registry-badge">
-                  <p>FULL</p>
-              </div>
+              <Card BabsonClass={BabsonClass} color={color} />
             </div>
           );
         }
@@ -130,7 +65,6 @@ class Registry extends Component {
           fluid={false}
           dockStyle={{ background: "#fff" }}
           size={window.innerHeight - 20}
-        
           duration={200}
           isVisible={this.state.isVisible}
           className="class-modal-window"
@@ -150,12 +84,60 @@ class Registry extends Component {
             }
             className="close-modal-item"
           />
-     
-          {this.renderAllBabsonClasses("FIN4505-01-11:30AM-1:05PM--24Fall2018Horn Library 119")}
+
+          {this.renderAllBabsonClasses(this.state.classID)}
+          <div className="class-detail-wrapper">
+            <div className="class-detail-row">
+              <div className="class-detail-item">
+                <p className="label">COURSE LEVEL</p>
+                <p className="value">Foundation Liberal Arts</p>
+              </div>
+              <div className="class-detail-item">
+                <p className="label">SEMESTER</p>
+                <p className="value">Full Session</p>
+              </div>
+            </div>
+            <div className="class-detail-row">
+              <div className="class-detail-item">
+                <p className="label">LOCATION</p>
+                <p className="value">Tommasso 207</p>
+              </div>
+            </div>
+            <div className="class-detail-row">
+              <div className="class-detail-item">
+                <p className="label">DESCRIPTION</p>
+                <p className="value">
+                  FYS1000: First Year Seminar This course will challenge
+                  students to critically examine important aspects of college
+                  student life, such as engaging in scholarly dialogue, becoming
+                  a proactive learner, and valuing a diverse and inclusive
+                  environment. Students will also be asked to reflect on their
+                  own abilities and how they can make an impact on campus and
+                  beyond. Additionally, students will develop important
+                  relationships with fellow students, peer leaders, faculty, and
+                  administrators. Students will earn a grade and one academic
+                  credit for their successful participation in this program.
+                  Participation in FYS is a graduation requirement for all
+                  Babson students.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="class-track-button-row">
+            <div className="class-track-button">
+              <p>TRACK</p>
+            </div>
+            <div className="class-track-button">
+              <p>SCHEDULE</p>
+            </div>
+            <div className="class-track-button">
+              <p>SHARE</p>
+            </div>
+          </div>
         </Dock>
         <div className="registry-search-wrapper">
-            <FiSearch />
-            <input type="text" label="search" placeholder="Search"/>
+          <FiSearch />
+          <input type="text" label="search" placeholder="Search" />
         </div>
         <div className="registry-inner-wrapper">
           {this.renderAllBabsonClasses(null)}
