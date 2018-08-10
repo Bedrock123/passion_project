@@ -258,7 +258,7 @@ html {
    bottom: 10px;
 }
 .registry-inner-wrapper .registry-item .registry-badge p {
-    font-family: "ocr-a-std",monospace;
+    font-family: "brandon-grotesque";
     margin: 0px;
     font-weight: 600;
     text-transform: uppercase;
@@ -288,7 +288,7 @@ html {
 }
 
 .registry-inner-wrapper .registry-item .registry-item-body .main-value {
-    font-family: "ocr-a-std",monospace;
+    font-family: "brandon-grotesque";
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
