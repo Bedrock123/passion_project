@@ -90,7 +90,6 @@ html {
     flex: 1;
     text-align: center;
     padding-top: 12px;
-    border-right: 1px solid #e9e9e9;
     color: #4e4e4e;
     text-decoration: none;
     position: relative;
@@ -197,7 +196,7 @@ html {
     margin: 34px 15px;
 }
 
-.registry-inner-wrapper .registry-item {
+ .registry-item {
     cursor: pointer;
     box-shadow:0px 5px 10px 0 rgb(169, 169, 169);
     padding: 15px;
@@ -210,45 +209,53 @@ html {
     bottom: 0px;
     position: relative;
 }
-.registry-inner-wrapper .silver-card {
+.silver-card {
     background: linear-gradient(160deg, #91a8cf 35%, #79869b 100%);
 }
-.registry-inner-wrapper .blue-card {
+ .blue-card {
     background: linear-gradient(160deg, #4274cb 35%, #183a76 100%);
 }
-.registry-inner-wrapper .purple-card {
+.purple-card {
     background: linear-gradient(160deg, #8e42cb 35%, #301876 100%);
 }
-.registry-inner-wrapper .red-card {
+.red-card {
     background: linear-gradient(160deg, #cb426a 35%, #761818 100%);
 }
-.registry-inner-wrapper .yellow-card {
+ .yellow-card {
     background: linear-gradient(160deg, #cbab42 35%, #767018 100%);
 }
-.registry-inner-wrapper .green-card {
+.green-card {
     background: linear-gradient(160deg, #42cb5d 35%, #187636 100%);
 }
 
-.registry-inner-wrapper .registry-item:hover {
+ .registry-item:hover {
     transition: all 0.3s ease;
     opacity: .86;
 }
+.registry-item:hover {
 
-.registry-inner-wrapper .registry-item .registry-item-header {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    bottom: 0;
+
+}
+
+.registry-item .registry-item-header {
     margin-bottom: 15px;
 }
 
-.registry-inner-wrapper .registry-item .label {
-    color: #d3d3d3;
+ .registry-item .label {
+    color: #ebebeb;
     font-size: 11px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 20px;
     margin: 0px 0px;
 
 }
 
-.registry-inner-wrapper .registry-item .registry-badge {
+.registry-item .registry-badge {
    position: absolute;
    right: 10px;
    background: rgba(255, 255, 255, 0.4);;
@@ -257,7 +264,7 @@ html {
     margin: 0px;
    bottom: 10px;
 }
-.registry-inner-wrapper .registry-item .registry-badge p {
+ .registry-item .registry-badge p {
     font-family: "brandon-grotesque";
     margin: 0px;
     font-weight: 600;
@@ -266,7 +273,7 @@ html {
     
 }
 
-.registry-inner-wrapper .registry-item .registry-item-header .main-value {
+ .registry-item .registry-item-header .main-value {
     color: #fff;
     font-size: 14px;
     
@@ -277,19 +284,19 @@ html {
     line-height: 20px;
 }
 
-.registry-inner-wrapper .registry-item .registry-item-body {
+ .registry-item .registry-item-body {
     display: flex;
     margin-bottom: 10px;
 }
 
-.registry-inner-wrapper .registry-item .registry-item-body .registry-item-block {
+ .registry-item .registry-item-body .registry-item-block {
     flex: 1;
     justify-content: flex-end;
 }
 
-.registry-inner-wrapper .registry-item .registry-item-body .main-value {
+ .registry-item .registry-item-body .main-value {
     font-family: "brandon-grotesque";
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 24px;

@@ -17,56 +17,108 @@ class Registry extends Component {
     super(props);
     this.state = {};
   }
-  renderAllBabsonClasses() {
+  renderAllBabsonClasses(ID) {
     return BabsonClasses.map(BabsonClass => {
       var color = cardColors[Math.floor(Math.random()*cardColors.length)]
-      if (BabsonClass.course_code === "ACC1000") {
-        return (
-          <div
-            className={"registry-item " + color }
-            onClick={() =>
-              this.setState({
-                isVisible: !this.state.isVisible
-              })
-            }
-          >
-            <div className="registry-item-header">
-              <p className="main-value">{BabsonClass.class_name}</p>
-            </div>
-            <div className="registry-item-body">
-  
+      if (ID) {
+        if (BabsonClass.unique_key_internal === ID) {
+          return (
+            <div
+              className={"registry-item " + color }
+              onClick={() =>
+                this.setState({
+                  isVisible: !this.state.isVisible
+                })
+              }
+            >
+              <div className="registry-item-header">
+                <p className="main-value">{BabsonClass.class_name}</p>
+              </div>
+              <div className="registry-item-body">
+    
+                <div className="registry-item-block">
+                  <p className="main-value">
+                  <p className="label">Time</p>
+                    {BabsonClass.day_of_week} | {BabsonClass.time}
+                  </p>
+                </div>
+              </div>
+              <div className="registry-item-body">
               <div className="registry-item-block">
-                <p className="main-value">
-                <p className="label">Time</p>
-                  {BabsonClass.day_of_week} | {BabsonClass.time}
-                </p>
+              <p className="label">Code</p>
+                  <p className="main-value">{BabsonClass.course_code}-{BabsonClass.course_section}</p>
+                </div>
+                <div className="registry-item-block">
+                <p className="label">Spots Left</p>
+                  <p className="main-value">{BabsonClass.spots_filled_string}</p>
+                </div>
+                <div className="registry-item-block">
+                  <p className="label">Credits</p>
+                  <p className="main-value">{BabsonClass.credits}</p>
+                </div>
+              </div>
+              <div className="registry-item-body">
+                <div className="registry-item-block">
+                <p className="label">Professors</p>
+                  <p className="main-value">{BabsonClass["professor(s)"]}</p>
+                </div>
+              </div>
+              <div class="registry-badge">
+                  <p>FULL</p>
               </div>
             </div>
-            <div className="registry-item-body">
-            <div className="registry-item-block">
-            <p className="label">Code</p>
-                <p className="main-value">{BabsonClass.course_code}-{BabsonClass.course_section}</p>
+          );
+        }
+      } else {
+
+        if (BabsonClass.course_code === "ACC1000") {
+          return (
+            <div
+              className={"registry-item " + color }
+              onClick={() =>
+                this.setState({
+                  isVisible: !this.state.isVisible
+                })
+              }
+            >
+              <div className="registry-item-header">
+                <p className="main-value">{BabsonClass.class_name}</p>
               </div>
+              <div className="registry-item-body">
+    
+                <div className="registry-item-block">
+                  <p className="main-value">
+                  <p className="label">Time</p>
+                    {BabsonClass.day_of_week} | {BabsonClass.time}
+                  </p>
+                </div>
+              </div>
+              <div className="registry-item-body">
               <div className="registry-item-block">
-              <p className="label">Spots Left</p>
-                <p className="main-value">{BabsonClass.spots_filled_string}</p>
+              <p className="label">Code</p>
+                  <p className="main-value">{BabsonClass.course_code}-{BabsonClass.course_section}</p>
+                </div>
+                <div className="registry-item-block">
+                <p className="label">Spots Left</p>
+                  <p className="main-value">{BabsonClass.spots_filled_string}</p>
+                </div>
+                <div className="registry-item-block">
+                  <p className="label">Credits</p>
+                  <p className="main-value">{BabsonClass.credits}</p>
+                </div>
               </div>
-              <div className="registry-item-block">
-                <p className="label">Credits</p>
-                <p className="main-value">{BabsonClass.credits}</p>
+              <div className="registry-item-body">
+                <div className="registry-item-block">
+                <p className="label">Professors</p>
+                  <p className="main-value">{BabsonClass["professor(s)"]}</p>
+                </div>
+              </div>
+              <div class="registry-badge">
+                  <p>FULL</p>
               </div>
             </div>
-            <div className="registry-item-body">
-              <div className="registry-item-block">
-              <p className="label">Professors</p>
-                <p className="main-value">{BabsonClass["professor(s)"]}</p>
-              </div>
-            </div>
-            <div class="registry-badge">
-                <p>FULL</p>
-            </div>
-          </div>
-        );
+          );
+        }
       }
     });
   }
@@ -77,7 +129,7 @@ class Registry extends Component {
           position="bottom"
           fluid={false}
           dockStyle={{ background: "#fff" }}
-          size={window.innerHeight - 30}
+          size={window.innerHeight - 20}
         
           duration={200}
           isVisible={this.state.isVisible}
@@ -85,7 +137,9 @@ class Registry extends Component {
           dockStyle={{
             background: "#fefefe",
             borderTopLeftRadius: "25px",
-            borderTopRightRadius: "25px"
+            borderTopRightRadius: "25px",
+            padding: "0px 12px",
+            width: "auto"
           }}
         >
           <div
@@ -96,13 +150,15 @@ class Registry extends Component {
             }
             className="close-modal-item"
           />
+     
+          {this.renderAllBabsonClasses("FIN4505-01-11:30AM-1:05PM--24Fall2018Horn Library 119")}
         </Dock>
         <div className="registry-search-wrapper">
             <FiSearch />
             <input type="text" label="search" placeholder="Search"/>
         </div>
         <div className="registry-inner-wrapper">
-          {this.renderAllBabsonClasses()}
+          {this.renderAllBabsonClasses(null)}
         </div>
       </div>
     );

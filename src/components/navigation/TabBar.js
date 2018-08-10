@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {FiDatabase, FiCrosshair, FiCalendar } from "react-icons/fi";
+import { FiCrosshair, FiCalendar } from "react-icons/fi";
+import { FaCreditCard } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 class TabBar extends Component {
@@ -12,7 +13,7 @@ class TabBar extends Component {
           to="/"
           activeClassName="active"
         >
-          <FiDatabase className="tab-bar-icon" />
+          <FaCreditCard className="tab-bar-icon" />
           <p>Registry</p>
           <div className="highlight-bar-left" />
           <div className="highlight-bar-right"/>
