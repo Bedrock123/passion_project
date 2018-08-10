@@ -63,6 +63,9 @@ html {
     color: #318834;
     cursor: pointer;
     position: absolute;
+    font-family: "brandon-grotesque";
+    text-transform: uppercase;
+    text-decoration: none;
     right: 15px;
     top: 36px;
 }
