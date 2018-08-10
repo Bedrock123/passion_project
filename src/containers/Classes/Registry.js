@@ -11,12 +11,48 @@ class Registry extends Component {
   renderAllBabsonClasses() {
     return BabsonClasses.map(BabsonClass => {
       return (
-        <div className="registry-item">
-          <p>{BabsonClass.class_name}</p>
-          <p>{BabsonClass.day_of_week}</p>
-          <p>{BabsonClass.spots_filled_string}</p>
-          <p>{BabsonClass.course_code}</p>
-          <p>{BabsonClass["professor(s)"]}</p>
+        <div
+          className="registry-item"
+          onClick={() =>
+            this.setState({
+              isVisible: !this.state.isVisible
+            })
+          }
+        >
+          <div className="registry-item-header">
+            <p className="label">TITLE</p>
+            <p className="main-value">{BabsonClass.class_name}</p>
+          </div>
+          <div className="registry-item-body">
+            <div className="registry-item-block">
+              <p className="label">COURSE NO.</p>
+              <p className="main-value">{BabsonClass.course_code}</p>
+            </div>
+            <div className="registry-item-block">
+              <p className="label">DAY TIME(S)</p>
+              <p className="main-value">{BabsonClass.day_of_week}</p>
+            </div>
+          </div>
+          <div className="registry-item-body">
+            <div className="registry-item-block">
+              <p className="label">INTRUSTORS</p>
+              <p className="main-value">{BabsonClass["professor(s)"]}</p>
+            </div>
+            <div className="registry-item-block">
+              <p className="label">CREDITS</p>
+              <p className="main-value">{BabsonClass.credits}</p>
+            </div>
+          </div>
+          <div className="registry-item-body">
+            <div className="registry-item-block">
+              <p className="label">SEMESTER</p>
+              <p className="main-value">{BabsonClass.semester}</p>
+            </div>
+            <div className="registry-item-block">
+              <p className="label">SPOTS LEFT</p>
+              <p className="main-value">{BabsonClass.spots_filled_string}</p>
+            </div>
+          </div>
         </div>
       );
     });
@@ -54,19 +90,7 @@ class Registry extends Component {
           Search <FiSearch />
         </h3>
         <div className="registry-inner-wrapper">
-          <div
-            className="registry-item"
-            onClick={() =>
-              this.setState({
-                isVisible: !this.state.isVisible
-              })
-            }
-          >
-            <div className="registry-item-header">
-              <p className="label">TITLE</p>
-              <p className="main-value">INTRODUCTION TO FINANCIAL ACCOUNTING</p>
-            </div>
-          </div>
+          {this.renderAllBabsonClasses()}
         </div>
       </div>
     );
