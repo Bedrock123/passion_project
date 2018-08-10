@@ -64,14 +64,12 @@ class Registry extends Component {
           position="bottom"
           fluid={false}
           dockStyle={{ background: "#fff" }}
-          size={window.innerHeight - 20}
+          size={window.innerHeight}
           duration={200}
           isVisible={this.state.isVisible}
           className="class-modal-window"
           dockStyle={{
             background: "#fefefe",
-            borderTopLeftRadius: "25px",
-            borderTopRightRadius: "25px",
             padding: "0px 12px",
             width: "auto"
           }}

@@ -199,8 +199,7 @@ html {
 /* Regisry Details */
 
 .class-detail-wrapper {
-    overflow: scroll;
-    height: 364px;
+    margin-bottom: 70px;
 }
 
 .class-detail-wrapper .class-detail-row {
@@ -227,23 +226,34 @@ html {
 
 .class-track-button-row {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 100%;
     right: 0;
+    border-top: 2px solid #2a539a;
+    bottom: 0;
 }
 
 .class-track-button {
     text-align: center;
     background: white;
-    font-family: "ocr-a-std", monospace;
     padding: 2px;
     border-right: 1px solid #c0c0c0;
     flex: 1;
+    position: cursor;
 }
 
 .class-track-button p {
-    font-family: "ocr-a-std", monospace;
-    color: #21417a;
+    margin: 0;
+    color: #7f7f7f;
+    opacity: 1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    font-family: "brandon-grotesque";
+    text-transform: uppercase;
+    /* Disable selection/copy in UIWebView */
+    font-weight: 600;
+    font-size: 11px;
+    padding: 10px;
 }
 
 .registry-item {
@@ -359,6 +369,6 @@ html {
     background: #d6d6d6;
     width: 100px;
     text-transform: uppercase;
-    margin: 10px auto;
+    margin: 19px auto;
     border-radius: 12px;
 }
