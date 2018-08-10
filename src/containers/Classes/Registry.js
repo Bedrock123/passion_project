@@ -55,6 +55,7 @@ class Registry extends Component {
         >
           Search <FiSearch />
         </h3>
+        <div className="registry-inner-wrapper" />
       </div>
     );
   }
